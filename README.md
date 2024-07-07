@@ -1,11 +1,5 @@
 # wikipedia-search-engine
 
-hello there, your task is to use debounce technique with the search input on the top of the page.
+This repository contains a simple web application that allows users to search for articles on Wikipedia using the Wikipedia API. The application displays search results dynamically as the user types in the search input.
 
-The following playlist can help you:
-
-https://youtube.com/playlist?list=PLNknCqb-phEgQ7QaZk0ANcMvXot1kP29r&si=s1vHXjyV_HZfk9MJ
-
-fork the repository and start working on it.
-
-best of luck.
+In this fork, debounce functionality has been added to improve performance by limiting the number of API calls made during rapid user input.
