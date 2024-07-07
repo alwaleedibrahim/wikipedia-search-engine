@@ -35,3 +35,20 @@ const generateResults = (searchValue, inputField) => {
         }
     })
 }
+
+const debounce = (delay, targetFunc, ...targetFuncParams) => {
+    let currentTimeOut;
+    return function() {
+        clearTimeout(currentTimeOut);
+        currentTimeOut = setTimeout(()=> {
+            targetFunc(...targetFuncParams);
+        }, delay)
+    }
+}
+
+const searchInput = document.getElementById("search-input");
+const debounceSearchInput = debounce(600, validateInput, searchInput);
+
+searchInput.addEventListener("keyup", ()=> {
+    debounceSearchInput();
+});
